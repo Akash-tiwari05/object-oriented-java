@@ -1,16 +1,16 @@
-package OOPs.inheritence;
+package OOPs.inheritence.animal;
 
 public class Animal {
 
-    private String type;
+    protected String type;
     private String size;
-    private int weight;
+    private double weight;
 
     public Animal(){
         //no args constructor
     }
 
-    public Animal(String type, String size, int weight) {
+    public Animal(String type, String size, double weight) {
         this.type = type;
         this.size = size;
         this.weight = weight;
