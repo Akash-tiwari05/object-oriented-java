@@ -1,4 +1,4 @@
-package encapsulation.challange;
+package OOPs.encapsulation.challange;
 
 public class Main {
 

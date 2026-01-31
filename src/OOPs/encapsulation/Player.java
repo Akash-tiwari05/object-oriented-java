@@ -1,4 +1,4 @@
-package encapsulation;
+package OOPs.encapsulation;
 
 public class Player {
 
