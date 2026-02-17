@@ -4,6 +4,8 @@ public class Main {
 
         System.out.println("24 inches = "+convertToCentimeters(24)+"cm");
         System.out.println(convertToCentimeters(5,10));
+
+        
     }
 
     public static double convertToCentimeters(int inches){
