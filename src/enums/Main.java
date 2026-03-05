@@ -23,7 +23,10 @@ public class Main {
             switchDayOfTheWeek(weekDay);
         }
 
+        for (Topping topping: Topping.values()){
+            System.out.println(topping.name() +" "+topping.getPrice());
 
+        }
     }
 
 
