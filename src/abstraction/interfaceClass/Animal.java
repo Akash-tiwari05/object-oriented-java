@@ -11,6 +11,13 @@ enum FlightStages implements Trackable{
             System.out.println("Monitoring "+this);
         }
     }
+
+    public FlightStages getNextStages(){
+
+        FlightStages[] allStages = values();
+        return allStages[ordinal()+1 % allStages.length];
+
+    }
 }
 
 record DragonFly(String name, String type) implements FlightEnabled{
@@ -57,6 +64,11 @@ class Satellite implements OrbitEarth{
 interface OrbitEarth extends FlightEnabled{
 
     void achieveOrbit();
+
+    private static void log(String description){
+        var today = new java.util.Date();
+        System.out.println(today+ ": "+ description);
+    }
 }
 
 interface FlightEnabled {
@@ -73,6 +85,12 @@ interface FlightEnabled {
     void land();
 
     void fly();
+
+    default FlightStages transition(FlightStages stage){
+        FlightStages nextStage = stage.getNextStages();
+        System.out.println("Transitions from "+stage+ " to "+nextStage);
+        return FlightStages.CRUISE;
+    }
 }
 
 interface Trackable{
