@@ -37,7 +37,7 @@ public class Main {
         var matrix = new BaseballPlayer("Matrix", "Striker");
         afc.addTeamMember(matrix);
         afc.listTeamMembers();
-
+/*
         Team<BaseballPlayer> phillies3 = new Team<>("Philadelphia Phillies");
         Team<BaseballPlayer> astros3 = new Team<>("Huston astros");
         System.out.println("_".repeat(50));
@@ -50,7 +50,7 @@ public class Main {
         //afc2.addTeamMember(matrix2); here check at compile time
         afc2.addTeamMember(rex2);
         afc2.listTeamMembers();
-        System.out.println("_".repeat(50));
+        System.out.println("_".repeat(50));*/
 
         phillies.addTeamMember(harper);
         phillies.addTeamMember(marsh);
